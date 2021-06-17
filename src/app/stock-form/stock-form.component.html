@@ -1,0 +1,26 @@
+<table border="1">
+  <tr >
+    <th *ngFor="let f of stockField">{{f}}</th>
+  </tr>
+  <tr *ngFor="let stock of stockContent">
+    <td>
+      {{stock.name}}
+    </td>
+    <td>
+      {{stock.endedVal}}
+    </td>
+    <td>
+      {{stock.status}}
+    </td>
+    <td>
+      {{stock.changes}}
+    </td>
+    <td>
+      {{stock.percentage}}
+    </td>
+    <td>
+      {{stock.mark}}
+    </td>
+  </tr>
+</table>
+<br>

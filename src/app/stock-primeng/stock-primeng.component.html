@@ -1,0 +1,17 @@
+<p-table #dt1 [value]="stockContent" [rows]="3" [paginator]="true">
+    <ng-template pTemplate="header" [globalFilterFields]="['name','endedVal','status','changes','percentage','mark']">
+        <tr>
+            <th *ngFor="let f of stockField">{{f}}<p-columnFilter type="text" field="name" display="menu"></p-columnFilter></th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-stock>
+        <tr>
+            <td>{{stock.name}}</td>
+            <td>{{stock.endedVal}}</td>
+            <td>{{stock.status}}</td>
+            <td>{{stock.changes}}</td>
+            <td>{{stock.percentage}}</td>
+            <td>{{stock.mark}}</td>
+        </tr>
+    </ng-template>
+</p-table>

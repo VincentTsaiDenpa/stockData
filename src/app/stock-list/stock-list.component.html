@@ -1,0 +1,9 @@
+<p-tabView>
+    <p-tabPanel [header]="'Data'+field.key" *ngFor="let field of fieldMap | keyvalue; let i = index" 
+    [selected]="i == 0" leftIcon="pi pi-slack" rightIcon="pi pi-check" tooltip="粉紅五毛食屎">
+        <app-stock-primeng [stockContent]="stockMap[field.key]" [stockField]="fieldMap[field.key]">
+        </app-stock-primeng>
+    </p-tabPanel>
+</p-tabView>
+
+
